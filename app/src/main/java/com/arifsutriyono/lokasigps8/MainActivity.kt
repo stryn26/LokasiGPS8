@@ -77,10 +77,34 @@ class MainActivity : AppCompatActivity() {
             LocationManager.NETWORK_PROVIDER
         )//melakukan return ketika salah satu atau dua metode pelacakan lokasi aktif atau bernilai true
     }
-    private fun checkPermissions( ):Boolean{
-        TODO("belum dikerjakan")
+    private fun checkPermissions( ):Boolean {
+        if(ActivityCompat.checkSelfPermission(
+                this,Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+            && ActivityCompat.checkSelfPermission(
+            this,Manifest.permission.ACCESS_FINE_LOCATION ) == PackageManager.PERMISSION_GRANTED
+            //cek ijin untuk lokasi perkiraan dan lokasi gps secara akurat
+        ){
+            return true
+        }
+        return false
     }
-    private fun requestPermissions():Boolean{
-        TODO("belum dikerjakan")
+    private fun requestPermissions() {
+       ActivityCompat.requestPermissions(this,arrayOf(//meminta ijin lokasi kepasa User
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+       ),
+           permissionId
+       )
+    }
+
+    fun onRequestPermissionResult(
+        requestCode:Int, permissions: Array<String>,grantResults: IntArray
+    ){
+        super.onRequestPermissionsResult(requestCode,permissions,grantResults)
+        if (requestCode == permissionId){
+            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)){
+                getLocation()
+            }
+        }
     }
 }
