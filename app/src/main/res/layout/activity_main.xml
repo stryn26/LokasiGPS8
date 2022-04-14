@@ -23,10 +23,11 @@
 
     <TextView
         android:id="@+id/latitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="415dp"
+        android:layout_height="35dp"
         android:layout_marginTop="24dp"
         android:text="@string/latitude"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,10 +35,11 @@
 
     <TextView
         android:id="@+id/longitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:text="@string/longtitude"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +47,11 @@
 
     <TextView
         android:id="@+id/namaNegara"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="415dp"
+        android:layout_height="38dp"
         android:layout_marginTop="24dp"
         android:text="@string/namanegara"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,25 +59,28 @@
 
     <TextView
         android:id="@+id/wilayah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="417dp"
+        android:layout_height="39dp"
         android:layout_marginTop="24dp"
         android:text="@string/wilayah"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namanegara" />
+        app:layout_constraintTop_toBottomOf="@+id/namaNegara" />
 
     <TextView
         android:id="@+id/alamat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="418dp"
+        android:layout_height="43dp"
         android:layout_marginTop="24dp"
         android:text="@string/Alamat"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLocation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wilayah" />
+        app:layout_constraintTop_toBottomOf="@+id/wilayah"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonLocation"

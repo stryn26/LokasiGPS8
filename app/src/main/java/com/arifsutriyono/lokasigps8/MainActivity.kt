@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                             longitude.text = "Longitude\n${list[0].longitude}"
                             namaNegara.text = "Nama Negara\n${list[0].countryName}"
                             wilayah.text = "Wilayah\n${list[0].locality}"
-                            alamat.text = "Alamat\\n${list[0].getAddressLine(0)}"
+                            alamat.text = "Alamat\n${list[0].getAddressLine(0)}"
                             //mengirimkan data ke layout kemudian akan ditampilkan
                         }
                     }
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
        )
     }
 
-    fun onRequestPermissionResult(
+    override fun onRequestPermissionsResult(
         requestCode:Int, permissions: Array<String>,grantResults: IntArray
     ){
         super.onRequestPermissionsResult(requestCode,permissions,grantResults)
