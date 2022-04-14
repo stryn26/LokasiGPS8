@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LokasiGPS8</string>
-    <string name="latitude">latitude</string>
-    <string name="longtitude">longtitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="longtitude">Longtitude</string>
     <string name="namanegara">Nama Negara</string>
     <string name="wilayah">Wilayah</string>
     <string name="Alamat">Alamat</string>
