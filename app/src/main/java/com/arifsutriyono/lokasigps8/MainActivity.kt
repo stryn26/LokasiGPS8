@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                             namaNegara.text = "Nama Negara\n${list[0].countryName}"
                             wilayah.text = "Wilayah\n${list[0].locality}"
                             alamat.text = "Alamat\\n${list[0].getAddressLine(0)}"
+                            //mengirimkan data ke layout kemudian akan ditampilkan
                         }
                     }
                 }
@@ -69,13 +70,17 @@ class MainActivity : AppCompatActivity() {
             requestPermissions()
         }
     }
-    private fun isLocationEnabled(){
+    private fun isLocationEnabled(): Boolean {
+        val locationManager : LocationManager =
+            getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)||locationManager.isProviderEnabled(
+            LocationManager.NETWORK_PROVIDER
+        )//melakukan return ketika salah satu atau dua metode pelacakan lokasi aktif atau bernilai true
+    }
+    private fun checkPermissions( ):Boolean{
         TODO("belum dikerjakan")
     }
-    private fun checkPermissions( ){
-        TODO("belum dikerjakan")
-    }
-    private fun requestPermissions(){
+    private fun requestPermissions():Boolean{
         TODO("belum dikerjakan")
     }
 }
